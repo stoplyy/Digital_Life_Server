@@ -30,7 +30,7 @@ class SentimentEngine():
         return predicted
 
 if __name__ == '__main__':
-    t = '不许你这样说我，打你'
     s = SentimentEngine('SentimentEngine/paimon_sentiment.onnx')
-    r = s.infer(t)
-    print(r)
+    print(s.infer('谢谢你，我太开心了'))
+    print(s.infer('不许你这样说我，打你'))
+    print(s.infer('你是谁'))
